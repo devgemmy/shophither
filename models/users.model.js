@@ -1,10 +1,10 @@
-const { Schema, ...mongoose } = require('mongooose');
+const { Schema, ...mongoose } = require('mongoose');
 
 const userSchema = new Schema({
     username: { type: String, required: true },
     age: { type: Number, min: 15, required: true },
     password: { type: String },
-    email: { type: String }
+    email: { type: String, email: true, lowercase: true, required: true }
 }, {
     timestamp: true
 });
@@ -16,9 +16,7 @@ userSchema.pre('save', async function() {
     });
 
     if(userExists) {
-        return Promise((resolve, reject) => {
-            reject(new Error({username: "Username is already taken"}));
-        })
+        return Promise.reject({username: 'Username is already taken'});
     }
     
     // age validation
