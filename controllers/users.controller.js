@@ -3,7 +3,9 @@ const User = require('../models/users.model');
 module.exports = class UserController {
     static async get(req, res, next) {
         res.json(
-            await User.find()
+            await User.find({
+                _id: req.params.user
+            })
         )
     }
 

@@ -8,6 +8,6 @@ router.route('/')
 router.route('/:id')
       .get(UserController.getOne)
       .put(UserController.update)
-      .delete(UserController.delete)
+      .delete(UserController.delete);
 
 module.exports = router;

@@ -1,5 +1,4 @@
 const { Schema, ...mongoose } = require('mongooose');
-const User = require('../models/users.model');
 
 const userSchema = new Schema({
     username: { type: String, required: true },
@@ -21,6 +20,7 @@ userSchema.pre('save', async function() {
             reject(new Error({username: "Username is already taken"}));
         })
     }
+    
     // age validation
     // password validation
     // email validation
