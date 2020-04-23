@@ -1,4 +1,5 @@
 const User = require('../models/users.model');
+const _ = require('lodash');
 
 module.exports = class UserController {
     static async get(req, res, next) {
@@ -17,7 +18,7 @@ module.exports = class UserController {
 
     static async create(req, res, next) {
         res.json(
-            await User.create(req.body)
+            _.omit((await User.create(req.body))._doc, ['password'])
         );
     }
 

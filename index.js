@@ -15,20 +15,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/users', userRoutes);
 
-<<<<<<< HEAD
-app.use((error, req, res, next) => {
-  const errorString = error.toString() == '[]' ? error : error.toString();
-  res.json({
-    error: errorString
-  });
-  
-=======
 app.use((err, req, res, next) => {
   const error = err.toString() !== '[object Object]' ? err.toString() : err;
   res.json({
     error
   });
->>>>>>> a1276046a7f7fe42c828ed01c255227b9a7ea8cc
 });
 
 app.listen(4556, () => {
