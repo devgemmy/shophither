@@ -15,6 +15,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/users', userRoutes);
 
+app.use((error, req, res, next) => {
+  const errorString = error.toString() == '[]' ? error : error.toString();
+  res.json({
+    error: errorString
+  });
+  
+});
+
 app.listen(4556, () => {
   console.log("App started");
 })
