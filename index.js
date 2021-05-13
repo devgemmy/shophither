@@ -6,7 +6,7 @@ require('mongoose').connect('mongodb://localhost:27017/kina', {
 });
 
 const express = require('express');
-const userRoutes = require('./routes/users.route');
+const userRoutes = require('./users/routes.config');
 const bodyParser = require("body-parser");
 const app = express();
 
