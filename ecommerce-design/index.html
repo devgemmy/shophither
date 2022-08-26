@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>E-commerce product page</title>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <div class="logo">
+        <img src="images/logo.svg">
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="list__item">Collections</li>
+          <li class="list__item">Men</li>
+          <li class="list__item">Women</li>
+          <li class="list__item">About</li>
+          <li class="list__item">Contact</li>
+        </ul>
+      </nav>
+      <div class="profile"> <!-- former .login-area-->
+        <span class="profile__shop"> <!-- former .login-area span -->
+          <img src="images/icon-cart.svg" class="profile__shop--icon">
+        </span>
+        <img src="images/image-avatar.png" class="profile--avatar">
+      </div>
+    </header>
+    <section class="product"> <!-- former .preview-sec-->
+      <div class="product__preview"> 
+        <img src="images/image-product-1.jpg" class="preview__img img--large"> <!-- former .large-img -->
+        <div class="product__thumbnails"> <!-- former preview-imgs -->
+          <img src="images/image-product-1-thumbnail.jpg" class="thumbnails--small"> <!-- former .small-img-->
+          <img src="images/image-product-2-thumbnail.jpg" class="thumbnails--small">
+          <img src="images/image-product-3-thumbnail.jpg" class="thumbnails--small">
+          <img src="images/image-product-4-thumbnail.jpg" class="thumbnails--small">
+        </div>
+      </div>
+      <div class="product__detail"> <!-- former .product-desc-->
+        <div class="detail__content"> <!-- former .desc-content -->
+          <h3 class="content__tag content__tag--green">Sneaker Company</h3>
+          <h1 class="content__title">Fall Limited Edition Sneakers</h1>
+          <p class="content__description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        </div>
+        <div class="detail__price"> <!-- former .desc-pricing -->
+          <div>
+            <h2 class="price__new">$125.00</h2>
+            <span class="price__discount price__discount--green">50%</span>
+          </div>
+          <div>
+            <del class="price__old">$250.00</del>
+          </div>
+        </div>
+        <form class="product__shop" name="cart"> <!-- former .desc-form -->
+          <div class="shop__quantity"> <!-- former .item-number -->
+            <span class="quantity__minus"> <!-- former .minus-button -->
+              <img src="images/icon-minus.svg" class="quantity--icon"> <!-- former .button-icon -->
+            </span>
+
+            <input class="quantity__number" name="qty" type="number" value="0" min="0" max="5" placeholder="0" required> 
+
+            <span class="quantity__plus" onclick="add()">
+              <img src="images/icon-plus.svg" class="quantity--icon">
+            </span>
+          </div>
+          <button type="submit" class="btn btn--green">
+            <span><img src="images/icon-cart-white.svg" class="submit__icon"></span>
+            Add to cart
+          </button>
+        </form>
+      </div>
+    </section> 
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a>Betsy Otoyo</a>.
+      </div>
+    </footer>
+
+    <script>
+      // alert("This is a themed e-commerce project! ")
+
+    </script>
+    <script src="js/script.js"></script>
+  </div>
+</body>
+</html>

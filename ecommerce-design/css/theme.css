@@ -1,0 +1,22 @@
+:root{
+  --green: rgb(55, 207, 55);
+  --pale-green: rgb(159, 202, 159);
+
+}
+.content__tag--orange{
+  color: var(--orange);
+}
+
+.content__tag--green{
+  color: var(--green);
+}
+
+.price__discount--orange{
+  background-color: var(--pale-orange);
+  color: var(--orange);
+}
+
+.price__discount--green {
+  background-color: var(--pale-green);
+  color: var(--green);
+}

@@ -1,0 +1,327 @@
+
+
+/* @import url("https://fonts.google.com/specimen/Kumbh+Sans"); */
+@import url('https://fonts.googleapis.com/css?family=Kumbh+Sans');
+@import url('theme.css');
+
+:root{
+    /* ## Colors */
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    /* Exmaple for BEM */
+    --green: rgb(55, 207, 55);
+
+    /* ## Typography */
+    --font-size-p: 16px;
+    --family: "Kumbh Sans";
+    --light-weight: 400;
+    --bold-weight: 700;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0px;
+    font-family: var(--family);
+}
+
+::selection {
+    background-color: var(--pale-orange);
+    color: var(--orange)
+}
+
+
+.body-wrapper {
+    width: 80%;
+    margin: 0px 10%;
+}
+
+/* ========================= HEADER SECTION ========================= */
+
+header {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    border-bottom: var(--grayish-blue) 1px solid;
+}
+
+.logo {
+    width: 15%;
+    padding: 2% 0px;
+}
+
+/* nav */
+nav.menu {
+    width: 75%;
+}
+
+/* nav ul*/
+.menu__list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex-grow: 5;
+}
+
+/* nav ul li */
+.list__item {
+    flex-flow: row wrap;
+    margin: 3%;
+}
+
+/* .login-area */
+.profile {
+    width: 10%;
+    padding: 1.5% 0px;
+}
+
+/* header .login-area span */
+.profile__shop {
+    position: absolute;
+    top: 30px;
+}
+
+/* .icon */
+.profile__shop--icon {
+    width: 20px;
+}
+
+/* avatar */
+.profile--avatar {
+    width: 40px;
+    float: right;
+}
+
+
+/* ========================= PRODUCT PREVIEW SECTION ========================= */
+
+/* section.preview-sec */
+.product {
+    margin: 100px;
+    display: flex;
+}
+
+/* .product-preview {} 
+
+.product__preview */
+
+
+/* .large-img */
+.preview__img {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.img--large {
+    width: 350px;
+}
+
+/* .preview-imgs */
+.product__thumbnails{
+    display: flex;
+}
+
+/* .small-img */
+.thumbnails--small {
+    flex: 1;
+    margin: 25px 10px;
+    width: 10px;
+    border-radius: 15px;
+}
+
+/* .small-img:hover */
+.thumbnails--small:hover{
+    cursor: pointer;
+    opacity:0.5;
+    border: var(--orange) 4px solid;
+
+}
+
+
+/* ========================= PRODUCT DESCRIPTION SECTION ========================= */
+
+/* .product-desc */
+.product__detail {
+    padding: 6% 0px 6% 10%;
+}
+
+/* .desc-content h3 */
+.content__tag{
+    font-size: 12px;
+    color: var(--orange); 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* font-weight: 900; */
+}
+
+/* .desc-content h1 */
+.content__title {
+    font-size: 3em;
+    color: var(--black); 
+    text-transform: capitalize;
+    font-weight: 900;
+    line-height: 1;
+    margin: 15px 0px 30px;
+}
+
+/* .desc-content p  */
+.content__description {
+    color: var(--dark-grayish-blue);
+    line-height: 1.6;
+}
+
+/* .product-desc div, .desc-form */
+.product__detail div, .product__shop {
+    margin-bottom: 25px;
+}
+
+/* .desc-pricing */
+.detail__price {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    justify-content: start;
+    height: 70px;
+
+}
+
+/* .desc-pricing h2 */
+.price__new {
+    margin: 0;
+}
+
+/* .desc-pricing span */
+.price__discount {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0 2px 7px;
+    border-radius: 7px;
+    width: 35px;
+    height: 20px;
+}
+
+/* .desc-pricing del */
+.price__old {
+    font-size: 14px;
+    color: var(--grayish-blue);
+}
+
+/* .desc-pricing div */
+.detail__price div {
+    width: 150px;
+}
+
+/* .desc-pricing div:first-child */
+.detail__price div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ========================= FORM SECTION ========================= */
+
+/* .button-icon, input */
+.quantity--icon,.quantity__number
+{
+    background-color: var(--light-grayish-blue);
+}
+
+/* .item-number */
+.shop__quantity {
+    display: inline;
+    background-color: var(--light-grayish-blue);
+    padding: 13px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* input */
+.quantity__number {
+    border: none;
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+}
+
+/* the pseudo class that controls the increment and decrement buttons */
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* the property for displaying or removing the + and - buttons  */
+}
+
+/* .minus-button */
+/* .quantity__minus {
+    margin-right: 0px;
+} */
+
+.btn {
+    width: 55%;
+    padding: 13px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn--green {
+    background-color: var(--green);
+}
+.btn--orange {
+    background-color: var(--orange);
+}
+
+.submit__icon {
+    padding: 0px 10px;
+    width: 15px;
+}
+
+/* form.desc-form */
+
+/* form
+input[type="number"]  */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: var(--orange); 
+}
+
+
+
+
+
+/* ========================= CSS NOTES ========================= */
+
+
+/* 
+Overriding explained 
+::selection {
+    background-color: var(--grayish-blue);
+    color: var(--black)
+} */
+
+/* DRY CSS */
+
+/* Naming Convention System  */
+
+/* BEM - Block Element Modifier */
+/* .block {
+    color: red;
+}
+
+.nav__button {
+    width: 50px;
+}
+
+.button--green {
+    color: var(--green);
+} */
